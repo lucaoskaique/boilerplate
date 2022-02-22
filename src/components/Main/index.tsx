@@ -1,3 +1,5 @@
+//import * as S from './styles'
+
 const Main = () => (
   <main>
     <h1>React Avançado</h1>
