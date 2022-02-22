@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import GlobalStyle from 'styles/global'
+import GlobalStyles from 'styles/global'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +15,7 @@ function App({ Component, pageProps }: AppProps) {
           Styled Components"
         ></meta>
       </Head>
-      <GlobalStyle />
+      <GlobalStyles />
       <Component {...pageProps} />
     </>
   )
