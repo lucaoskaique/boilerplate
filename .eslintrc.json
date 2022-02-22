@@ -59,6 +59,14 @@
                     "ignoreCase": true
                 }
             }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    "**/*.spec.js"
+                ]
+            }
         ]
     }
 }
