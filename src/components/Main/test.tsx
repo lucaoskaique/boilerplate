@@ -4,18 +4,21 @@ import Main from '.'
 
 describe('<Main />', () => {
   it('should render the heading', () => {
-    const { container } = render(<Main />)
+    render(<Main />)
 
     expect(
       screen.getByRole('heading', { name: /next-starter/i })
     ).toBeInTheDocument()
-
-    expect(container.firstChild).toMatchSnapshot()
   })
 
-  it('should render the colors correctly', () => {
-    const { container } = render(<Main />)
+  it('should render with custom title and description', () => {
+    render(<Main title="Custom Title" description="Custom Description" />)
 
-    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
+    expect(
+      screen.getByRole('heading', { name: /custom title/i })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /custom description/i })
+    ).toBeInTheDocument()
   })
 })

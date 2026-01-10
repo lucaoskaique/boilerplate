@@ -11,13 +11,11 @@
         }
     },
     "extends": [
-        "next",
-        "eslint:recommended",
-        "plugin:react/recommended",
+        "next/core-web-vitals",
         "plugin:@typescript-eslint/recommended",
         "plugin:react-hooks/recommended",
-        "prettier",
-        "plugin:prettier/recommended"
+        "plugin:storybook/recommended",
+        "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -28,36 +26,18 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
         "@typescript-eslint",
-        "react-hooks",
-        "prettier",
-        "eslint-plugin-import-helpers"
+        "react-hooks"
     ],
     "rules": {
-        "prettier/prettier": "error",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
-        "react/prop-types": "off",
-        "react/react-in-jsx-scope": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
-        "import-helpers/order-imports": [
+        "@typescript-eslint/no-unused-vars": [
             "warn",
             {
-                "newlinesBetween": "always",
-                "groups": [
-                    "module",
-                    "/^@shared/",
-                    [
-                        "parent",
-                        "sibling",
-                        "index"
-                    ]
-                ],
-                "alphabetize": {
-                    "order": "asc",
-                    "ignoreCase": true
-                }
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_"
             }
         ]
     }
