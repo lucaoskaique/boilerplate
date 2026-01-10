@@ -1,18 +1,15 @@
-import { RouterContext } from 'next/dist/shared/lib/router-context'
+import '../src/styles/globals.css'
 
-import GlobalStyles from '../src/styles/global'
-
-export const parameters = {
-  nextRouter: {
-    Provider: RouterContext.Provider
+/** @type { import('@storybook/react').Preview } */
+const preview = {
+  parameters: {
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i
+      }
+    }
   }
 }
 
-export const decorators = [
-  (Story) => (
-    <>
-      <GlobalStyles />
-      <Story />
-    </>
-  )
-]
+export default preview

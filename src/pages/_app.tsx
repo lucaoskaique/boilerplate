@@ -1,22 +1,20 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import GlobalStyles from 'styles/global'
+import '@/styles/globals.css'
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>React/Nextjs - Boilerplate</title>
-        <link rel="short icon" href="/img/icon-512.png"></link>
-        <link rel="apple touch icon" href="/img/icon-512.png"></link>
-        <link rel="manifest" href="/manifest.json"></link>
+        <title>React/Next.js - Boilerplate</title>
+        <link rel="shortcut icon" href="/img/icon-512.png" />
+        <link rel="apple-touch-icon" href="/img/icon-512.png" />
+        <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="A simple project starter to work with Typescript, React, Nextjs and 
-          Styled Components"
-        ></meta>
+          content="A simple project starter to work with TypeScript, React, Next.js and Tailwind CSS"
+        />
       </Head>
-      <GlobalStyles />
       <Component {...pageProps} />
     </>
   )
